@@ -2,6 +2,10 @@ from flask import Flask,request,render_template
 from flask_sqlalchemy import SQLAlchemy
 import os
 import module
+import requests
+from bs4 import BeautifulSoup
+import re
+from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 
 app = Flask(__name__)
 
