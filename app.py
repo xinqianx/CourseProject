@@ -11,6 +11,48 @@ app = Flask(__name__)
 
 categories = ['Technology', 'Food', 'Entertainment', 'Animation', 'Outdoor', 'BoardGame', 'Sport', 'Investment']
 
+def getURL(url):
+    
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
+
+    html = requests.get(url,headers=headers)
+    bs_html = BeautifulSoup(html.text,'html.parser')
+
+    #remove stopwords and single digit word
+    words = [word for word in bs_html.text.split() if word.lower() not in ENGLISH_STOP_WORDS]
+    rm_stopwords = " ".join(words)
+
+    content = re.findall(r'\w+', rm_stopwords) #remove punctuation
+
+    #filter numbers
+    def int_filter(list_i):
+        for v in list_i:
+            try:
+                int(v)
+                continue # Skip these
+            except ValueError:
+                yield v # Keep these
+
+    number_filter = (list(int_filter(content)))
+
+    len_filter = [w for w in number_filter if len(w)>1]
+
+    data = {}
+    #store in dictionary and word count
+    for i in range(len(len_filter)):
+        if len_filter[i].lower() not in data:
+            data[len_filter[i].lower()] = 1 #lowercase only
+        else:
+            data[len_filter[i].lower()] += 1
+
+    #sort in descending order
+    sort_orders = sorted(data.items(), key=lambda x: x[1], reverse=True)
+    sort_dict = {}
+    for i  in sort_orders:
+        sort_dict[i[0]] = i[1]
+
+    return sort_dict
+
 @app.route('/insert_user')
 def insert_user():
     name = request.args.get('name')
@@ -57,6 +99,8 @@ def root():
                 'user': user,
                 'url': url
             }
+            urldata = getURL(url)
+            print(urldata)
             selectedUser = tb.getByName(user)
             feedback_ = str(selectedUser.feedback)
             keyWords = feedback_    .split(',')
