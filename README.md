@@ -14,7 +14,7 @@ People who want to know high levels of a given url without reading through all t
 
 
 ## Category Development
-
+We obtain category in two ways: category inventory in database and category update by user. First, we generate a category inventory in our database. We include 10 different categories, each contain top 30 keywords in terms of popularity. For example, swimming and table tennis are included in the sports category. Then, when users update their interest, category will also be added or updated.
 
 ## Algorithm Exploration
 Given the goal of the hyperlink classification, we first remove stop words and extract english words only. We also utilize a pre-trained model and nltk library to get the top frequent key phrases.
