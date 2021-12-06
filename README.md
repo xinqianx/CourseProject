@@ -1,7 +1,7 @@
 ## Introduction
 We are presenting a tool called URL classification 
 
-## The tool includes the following features.
+The tool includes the following features.
 - Develop a list of categories and corresponding key words
 - Scrape text from user-provided url
 - Generate top key phrases about the text and sentiment
