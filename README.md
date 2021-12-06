@@ -40,7 +40,8 @@ Packages required:
 People who want to know high levels of a given url without reading through all the text
 
 ## Installation requirement 
-
+The `requirements.txt` file should list all Python libraries and they will be installed using:
+`pip install -r requirements.txt`
 
 ## Category Development
 We obtain category in two ways: build category inventory in database and update category by users. First, we generate 
