@@ -1,5 +1,17 @@
+# HyperLink Classification
+Final Project CS410, UIUC
+
+Group Name: *TTIS 5*
+- Zhengkai Zhang (zz68) - Captain
+- Yuan Chung Ho (ych11) 
+- Wan Feng Cai (wfcai2) 
+- Xinqian Xiang (xinqian6) 
+- Zheng Ma (zhengma3
+
+
+
 ## Introduction
-We are presenting a tool called URL classification 
+We are presenting a tool called **HyperLink classification** 
 
 The tool includes the following features.
 - Develop a list of categories and corresponding key words
