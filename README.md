@@ -9,10 +9,7 @@ Group Name: *TTIS 5*
 - Zheng Ma (zhengma3
 
 ## Introduction
-We receive a mass amount of information everyday, for example advertisements from email and 
-push notifications from search engines, and it comes with a link to another page. We scan 
-through titles and quickly make decisions whether we are interested or not. It is time 
-consuming in searching through the interesting information. Therefore, we are encouraged 
+We receive a mass amount of information everyday, for example advertisements from email and push notifications from search engines, and it comes with a link to another page. We scan through titles and quickly make decisions whether we are interested or not. It is time consuming in searching through the interesting information. Therefore, we are encouraged 
 to seek a way to pick out useful information to make our life more efficient.
 
 ## Objective
@@ -54,8 +51,9 @@ The `requirements.txt` file should list all Python libraries and they will be in
 8. http://127.0.0.1:5000/user router to create new user, http://127.0.0.1:5000 root router to use the appp
 
 ## Front end
-We developed two main front end one is /user page which allow user to create new user with their name and categories selected
-the root page is the UI for the app. user/admin will able to pick the user the created and input the url they want to classify.
+We developed two main front end: one is `/user` page which allows users to create new user profiles with their names and select 
+categories for themselves. The root page of the UI is `app.user/admin` which is able to pick the user the created and 
+input the url they want to classify.
 it will return the summary of the link, and user will able to select they like the link content or not.
 
 ## Back end
@@ -81,9 +79,13 @@ category will also be added or updated.
 Given the goal of the hyperlink classification, we first remove stop words and extract english words only. 
 
 ### Data Mining 
-For the text data from the above step, we decide a threshold which depends on the length of the url text data size.
+For the text data from the above step, we decided a changeable threshold which depends on the length of the url text data size.
 Similar to IDF, we set bigger threshold value for larger data set and smaller one for smaller data set.
-We utilize a pre-trained model and nltk library to find the top frequent key phrases. 
+
+In the end,we utilize a pre-trained model and nltk library to find the top frequent key phrases.
+The top keywords return to the user to help him or her make decision whether this url is interesting to him or her. 
+The categories identified for the url can also assist users to identify whether they may like the link. 
+For the sentiment analysis, we make judgement about the url which will also be a good reference for users.
 
 ## References
 https://www.nltk.org/
