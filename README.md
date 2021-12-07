@@ -43,6 +43,33 @@ People who want to know high levels of a given url without reading through all t
 The `requirements.txt` file should list all Python libraries and they will be installed using:
 `pip install -r requirements.txt`
 
+## Steps to setup
+1. git clone https://github.com/xinqianx/CourseProject.git
+2. download postgreappp from https://postgresapp.com/
+3. install the postgreapp and create a new server with port 5430
+4. setup the password for server 5430's default user postgres with kaikai49 (code db link: "postgresql://postgres:kaikai49@localhost:5430")
+5. source  source venv/bin/activate  (it include all package needed) if not have venv do ppipp3 install requirements.txt will install dependencies
+6. python3 import.py (set up the default category)
+7. python3 app.py (start the app)
+8. http://127.0.0.1:5000/user router to create new user, http://127.0.0.1:5000 root router to use the appp
+
+## Front end
+We developed two main front end one is /user page which allow user to create new user with their name and categories selected
+the root page is the UI for the app. user/admin will able to pick the user the created and input the url they want to classify.
+it will return the summary of the link, and user will able to select they like the link content or not.
+
+## Back end
+We defined apis for update/delete/create/insert user's feed back.
+Also, we defined api to update/delete/create categories.
+with the router page, when user submit form of url. it will process the link with our scraping logic to get all the content.
+After get the content we will do the algorithm to get the classification result.
+Our logic will penilize the longer content and increase the threshold to pick an appeared word if it is in the longer document/web page.
+It will return the top keywords and categories for the web page, and we also compute the sentiment summary for the web page.
+It will decide if user has the same interested keywords with the web page and show the classifcation decision as yes or no.
+After User get the result, user can select yes interested with the link then it will add the top keyword to user's feedback list.
+Even the link don't has the user's interested categories if the user select yes.
+Next time user input similar web site with this website it could make decision become true since we add feedback from user as consideration. 
+
 ## Category Development
 We obtain category in two ways: build category inventory in database and update category by users. First, we generate 
 a category inventory in our database. We include 10 different categories, each contain top 30 keywords in terms of popularity. 
