@@ -1,6 +1,6 @@
 # HyperLink Classification
 
-![Banner](/doc/Banner3.png)
+![Banner](/doc/Banner3.png = 250x250)
 
 Final Project CS410, UIUC
 Group Name: *TTIS 5*
