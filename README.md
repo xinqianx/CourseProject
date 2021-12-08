@@ -1,7 +1,6 @@
 ## HyperLink Classification
 
-![Banner](/doc/Banner3.png)
-<img src="https://github.com/xinqianx/CourseProject/blob/main/doc/Banner3.png" width=90% height=50%>
+<img src="https://github.com/xinqianx/CourseProject/blob/main/doc/Banner3.png" width=80% height=40%>
 
 Final Project CS410, UIUC
 Group Name: *TTIS 5*
