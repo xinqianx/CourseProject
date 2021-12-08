@@ -138,6 +138,9 @@ class Category(base):
             return 'not able to delete this time'
         return 'success deleted'
 
+    def dropTable(self):
+        session.query(Category).delete()
+        session.commit()
 # # Delete
 # stmt = delete(Users).where(Users.name == 'Doctor Strange')
 # result = session.execute(stmt)

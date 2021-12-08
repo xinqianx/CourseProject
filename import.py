@@ -16,7 +16,7 @@ keyword = []
 
 
 tb = module.Category()
-tb.deleteall()
+tb.dropTable()
 with open('category_key_inventory.csv',mode='r', encoding='utf-8-sig') as csvfile:
      reader = csv.reader(csvfile)
      
