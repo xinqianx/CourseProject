@@ -45,7 +45,7 @@ The `requirements.txt` file should list all Python libraries and they will be in
 2. download postgreappp from https://postgresapp.com/
 3. install the postgreapp and create a new server with port 5430
 4. setup the password for server 5430's default user postgres with kaikai49 (code db link: "postgresql://postgres:kaikai49@localhost:5430")
-5. source  source `venv/bin/activate`  (it include all package needed) if not have venv do `pip3 install requirements.txt` will install dependencies
+5. source  source `venv/bin/activate`  (it include all package needed) if not have venv do `pip3 install -r requirements.txt` will install dependencies
 6. `python3 import.py` (set up the default category)
 7. `python3 app.py` (start the app)
 8. http://127.0.0.1:5000/user router to create new user, http://127.0.0.1:5000 root router to use the app
