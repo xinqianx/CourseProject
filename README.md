@@ -1,8 +1,8 @@
 # HyperLink Classification
-Final Project CS410, UIUC
 
 ![Banner](/doc/Banner.png)
 
+Final Project CS410, UIUC
 Group Name: *TTIS 5*
 - Zhengkai Zhang (zz68) - Captain
 - Yuan Chung Ho (ych11) 
