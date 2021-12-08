@@ -6,7 +6,7 @@ Group Name: *TTIS 5*
 - Yuan Chung Ho (ych11) 
 - Wan Feng Cai (wfcai2) 
 - Xinqian Xiang (xinqian6) 
-- Zheng Ma (zhengma3
+- Zheng Ma (zhengma3)
 
 ## Introduction
 We receive a mass amount of information everyday, for example advertisements from email and push notifications from search engines, and it comes with a link to another page. We scan through titles and quickly make decisions whether we are interested or not. It is time consuming in searching through the interesting information. Therefore, we are encouraged 
