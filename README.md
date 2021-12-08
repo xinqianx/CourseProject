@@ -1,7 +1,7 @@
 ### HyperLink Classification
 
-<img src="https://github.com/xinqianx/CourseProject/blob/main/doc/Banner3.png" width=90% height=30%>
-
+<img src="https://github.com/xinqianx/CourseProject/blob/main/doc/Banner3.png" width="400" height="280"  >
+width="150" height="280"   width=90% height=30%
 Final Project CS410, UIUC
 Group Name: *TTIS 5*
 - Zhengkai Zhang (zz68) - Captain
